@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import { NavLink } from "react-router-dom";
-import { AppBar, Tabs, Tab, FlatButton } from "material-ui";
+import { AppBar, FlatButton, MenuItem } from "material-ui";
 
 
 import logo from "../../hv-logo.png";
@@ -12,25 +12,22 @@ const menuLinks = {
   "Contact": "/contact"
 };
 
+              // <NavLink to={menuLinks[item]} />
+        // iconElementRight={<FlatButton labelStyle={{margin: 0}} style={{height:"100%", margin: 0}} label="home" />}
 const menuTexts = ["Home", "About", "Gallery", "Contact"];
 
 class NavigationItems extends Component {
 
   render() {
     let style = {
-      height: "100%",
-      marginTop: "-5px",
-      padding: "0"
+      marginTop: "7px"
     };
 
     return (
-      <div>
+      <div style={style} className="nav-items">
         {menuTexts.map(item => {
           return (
-            <FlatButton
-              key={item} label={item}
-              containerElement={<NavLink to={menuLinks[item]} />}
-            />
+            <FlatButton key={item} label={item} containerElement={<NavLink to={menuLinks[item]}>{item}</NavLink>} />
           );
         })}
       </div>
