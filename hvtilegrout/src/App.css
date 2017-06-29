@@ -1,3 +1,9 @@
 body {
-  background-color: #9E9E9E;
+  background-color: #37474F;
+  color: white;
+  font-family: 'Roboto', sans-serif;
+}
+
+h1, h2, h3, h4 {
+  font-weight: 200;
 }
