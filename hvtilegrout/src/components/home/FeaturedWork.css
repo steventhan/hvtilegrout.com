@@ -1,0 +1,22 @@
+.featured-work {
+  background-color: #F5F5F5;
+  text-align: center;
+  color: #000;
+  height: 40em;
+}
+
+.featured-work .container {
+  width: 70%;
+}
+
+.featured-work .gallery {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-content: space-between;
+  align-items: center;
+}
+
+.featured-work .gallery img {
+  margin: auto;
+}
