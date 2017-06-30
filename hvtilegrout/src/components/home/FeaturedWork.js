@@ -1,7 +1,21 @@
 import React, { Component } from "react";
+import { NavLink } from "react-router-dom";
+import { RaisedButton } from "material-ui";
 import "./FeaturedWork.css";
 
 class FeaturedWork extends Component {
+  constructor() {
+    super();
+    this.images = [
+      "http://i.imgur.com/kwNKVWc.jpg",
+      "http://i.imgur.com/wDi6zYv.jpg",
+      "http://i.imgur.com/F9uBiUY.jpg",
+      "http://i.imgur.com/F9uBiUY.jpg",
+      "http://i.imgur.com/F9uBiUY.jpg",
+      "http://i.imgur.com/MFjDnru.jpg"
+    ];
+  }
+
   render() {
     return (
       <section className="featured-work">
@@ -10,13 +24,9 @@ class FeaturedWork extends Component {
           <h3>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse ex quam, suscipit ut ipsum ultrices,
           mattis tempor nisl. </h3>
           <div className="gallery">
-            <img src="http://i.imgur.com/kwNKVWc.jpg"/>
-            <img src="http://i.imgur.com/wDi6zYv.jpg"/>
-            <img src="http://i.imgur.com/F9uBiUY.jpg"/>
-            <img src="http://i.imgur.com/F9uBiUY.jpg"/>
-            <img src="http://i.imgur.com/F9uBiUY.jpg"/>
-            <img src="http://i.imgur.com/MFjDnru.jpg"/>
+            {this.images.map(i => <img src={i} />)}
           </div>
+          <RaisedButton label="Visit Our Gallery" secondary containerElement={<NavLink to="/gallery"/>}/>
         </div>
       </section>
     );
