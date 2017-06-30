@@ -5,7 +5,9 @@ class Footer extends Component {
   render() {
     return (
       <BottomNavigation>
-        <p>&copy; HV Tile Grout 2017</p>
+        <section>
+          <p>&copy; HV Tile Grout 2017</p>
+        </section>
       </BottomNavigation>
     );
   }
