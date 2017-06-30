@@ -1,7 +1,7 @@
 .featured-work {
   background-color: #F5F5F5;
   text-align: center;
-  color: #000;
+  color: #37474F;
 }
 
 .featured-work .gallery {
@@ -10,6 +10,7 @@
   justify-content: space-between;
   align-content: space-between;
   align-items: center;
+  margin-bottom: 2em;
 }
 
 .featured-work .gallery img {

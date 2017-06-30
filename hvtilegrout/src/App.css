@@ -16,8 +16,20 @@ h1, h2, h3, h4 {
 section {
   display: flex;
   justify-content: center;
+  flex: 1;
 }
 
 section h1 {
   font-size: 2em;
+}
+
+section .container {
+  width: 85%;
+  margin-bottom: 3em;
+}
+
+@media only screen and (min-width: 640px) {
+  section .container {
+    width: 75%;
+  }
 }
