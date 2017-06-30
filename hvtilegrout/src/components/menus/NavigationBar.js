@@ -12,8 +12,6 @@ const menuLinks = {
   "Contact": "/contact"
 };
 
-              // <NavLink to={menuLinks[item]} />
-        // iconElementRight={<FlatButton labelStyle={{margin: 0}} style={{height:"100%", margin: 0}} label="home" />}
 const menuTexts = ["Home", "About", "Gallery", "Contact"];
 
 class NavigationItems extends Component {
@@ -46,6 +44,5 @@ class NavigationBar extends Component {
     );
   }
 }
-
 
 export default NavigationBar;
