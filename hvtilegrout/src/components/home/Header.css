@@ -1,0 +1,15 @@
+.header {
+  height: 94vh;
+  display: flex;
+  justify-content: center;
+}
+
+.header h1 {
+  font-size: 3em;
+}
+
+.header .container {
+  max-width: 50%;
+  text-align: center;
+  margin-top: 10%;
+}
