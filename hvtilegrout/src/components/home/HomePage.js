@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import Header from "./Header";
 import FeaturedWork from "./FeaturedWork";
+import OurTeam from "./OurTeam";
 
 class HomePage extends Component {
   render() {
@@ -8,6 +9,7 @@ class HomePage extends Component {
       <main className="home-page">
         <Header />
         <FeaturedWork />
+        <OurTeam />
       </main>
     );
   }
