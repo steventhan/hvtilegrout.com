@@ -1,5 +1,5 @@
 body {
-  background-color: #37474F;
+  min-height: 100vh;
   color: #fff;
   font-family: 'Roboto', sans-serif;
 }
@@ -26,6 +26,12 @@ section h1 {
 section .container {
   width: 85%;
   margin-bottom: 3em;
+}
+
+@media only screen and (max-width: 640px) {
+  .nav-items {
+    display: none;
+  }
 }
 
 @media only screen and (min-width: 640px) {
