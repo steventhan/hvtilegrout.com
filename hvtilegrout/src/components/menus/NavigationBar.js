@@ -5,12 +5,12 @@ import { AppBar, FlatButton, MenuItem } from "material-ui";
 
 import logo from "../../hv-logo.png";
 
-const menuLinks = {
-  "Home": "/",
-  "About": "/about",
-  "Gallery": "/gallery",
-  "Contact": "/contact"
-};
+const menuLinks = [
+  {text: "Home", url: "/"},
+  {text: "About", url: "/about"},
+  {text: "Gallery", url: "/gallery"},
+  {text: "Contact", url: "/contact"},
+];
 
 const menuTexts = ["Home", "About", "Gallery", "Contact"];
 
@@ -23,9 +23,13 @@ class NavigationItems extends Component {
 
     return (
       <div style={style} className="nav-items">
-        {menuTexts.map(item => {
+        {menuLinks.map(item => {
           return (
-            <FlatButton key={item} label={item} containerElement={<NavLink to={menuLinks[item]}>{item}</NavLink>} />
+            <FlatButton
+              key={item.text}
+              label={item.text}
+              containerElement={<NavLink to={item.url}>{item.text}</NavLink>}
+            />
           );
         })}
       </div>
