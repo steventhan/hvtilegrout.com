@@ -28,7 +28,13 @@ class NavigationItems extends Component {
             <FlatButton
               key={item.text}
               label={item.text}
-              containerElement={<NavLink to={item.url}>{item.text}</NavLink>}
+              containerElement={
+                <NavLink
+                  exact to={item.url}
+                  activeStyle={{backgroundColor: "rgba(153, 153, 153, 0.2)"}}>
+                  {item.text}
+                </NavLink>
+              }
             />
           );
         })}
