@@ -24,7 +24,7 @@ class FeaturedWork extends Component {
           <h3>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse ex quam, suscipit ut ipsum ultrices,
           mattis tempor nisl. </h3>
           <div className="gallery">
-            {this.images.map(i => <img src={i} />)}
+            {this.images.map((i, key) => <img key={key} src={i} />)}
           </div>
           <RaisedButton label="Visit Our Gallery" secondary containerElement={<NavLink to="/gallery"/>}/>
         </div>
