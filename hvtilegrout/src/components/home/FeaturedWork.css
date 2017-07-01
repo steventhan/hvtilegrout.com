@@ -13,6 +13,6 @@
   margin-bottom: 2em;
 }
 
-.featured-work .gallery img {
+.featured-work .gallery a {
   margin: auto;
 }
