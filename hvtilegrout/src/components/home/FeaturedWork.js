@@ -43,7 +43,25 @@ class Gallery extends Component {
   render() {
     return (
       <div className="gallery">
-        {this.images.map((img, indx) => <img onClick={e => this.handleClick(indx)} key={indx} src={img.src} />)}
+        {this.images.map((img, indx) => {
+          return (
+            <a
+              href=""
+              onTouchTap={e => {
+                e.preventDefault();
+                return this.handleClick(indx);
+              }}
+              onClick={e => {
+                e.preventDefault();
+                return this.handleClick(indx);
+              }}
+              key={indx}
+              >
+              <img src={img.src}/>
+            </a>
+          );
+        })}
+
         <Lightbox
           images={this.images}
           currentImage={this.state.currentImage}
