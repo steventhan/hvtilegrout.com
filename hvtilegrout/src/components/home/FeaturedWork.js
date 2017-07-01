@@ -69,6 +69,7 @@ class Gallery extends Component {
           onClose={this.handleClose}
           onClickNext={this.handleNext}
           onClickPrev={this.handlePrev}
+          backdropClosesModal
         />
       </div>
     );
