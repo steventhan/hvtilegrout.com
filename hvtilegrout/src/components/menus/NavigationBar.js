@@ -17,7 +17,7 @@ class NavigationItems extends Component {
 
   render() {
     let style = {
-      marginTop: "7px"
+      marginTop: "6px"
     };
 
     return (
