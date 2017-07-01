@@ -1,21 +1,63 @@
 import React, { Component } from "react";
 import { NavLink } from "react-router-dom";
 import { RaisedButton } from "material-ui";
+import Lightbox from "react-images";
+
 import "./FeaturedWork.css";
 
-class FeaturedWork extends Component {
-  constructor() {
-    super();
+class Gallery extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {lightboxIsOpen: false, currentImage: 0};
     this.images = [
-      "http://i.imgur.com/kwNKVWc.jpg",
-      "http://i.imgur.com/wDi6zYv.jpg",
-      "http://i.imgur.com/F9uBiUY.jpg",
-      "http://i.imgur.com/F9uBiUY.jpg",
-      "http://i.imgur.com/F9uBiUY.jpg",
-      "http://i.imgur.com/MFjDnru.jpg"
+      {src: "http://i.imgur.com/kwNKVWc.jpg"},
+      {src: "http://i.imgur.com/wDi6zYv.jpg"},
+      {src: "http://i.imgur.com/F9uBiUY.jpg"},
+      {src: "http://i.imgur.com/F9uBiUY.jpg"},
+      {src: "http://i.imgur.com/F9uBiUY.jpg"},
+      {src: "http://i.imgur.com/MFjDnru.jpg"}
     ];
+
+    this.handleClick = this.handleClick.bind(this);
+    this.handleClose = this.handleClose.bind(this);
+    this.handleNext = this.handleNext.bind(this);
+    this.handlePrev = this.handlePrev.bind(this);
   }
 
+  handleClick(indx) {
+    this.setState({lightboxIsOpen: true, currentImage: indx});
+  }
+
+  handleClose() {
+    this.setState({lightboxIsOpen: false, currentImage: 0});
+  }
+
+  handleNext() {
+    this.setState({currentImage: (this.state.currentImage + 1) % this.images.length});
+  }
+
+  handlePrev() {
+    this.setState({currentImage: (this.state.currentImage - 1) % this.images.length});
+  }
+
+  render() {
+    return (
+      <div className="gallery">
+        {this.images.map((img, indx) => <img onClick={e => this.handleClick(indx)} key={indx} src={img.src} />)}
+        <Lightbox
+          images={this.images}
+          currentImage={this.state.currentImage}
+          isOpen={this.state.lightboxIsOpen}
+          onClose={this.handleClose}
+          onClickNext={this.handleNext}
+          onClickPrev={this.handlePrev}
+        />
+      </div>
+    );
+  }
+}
+
+class FeaturedWork extends Component {
   render() {
     return (
       <section className="featured-work">
@@ -23,9 +65,7 @@ class FeaturedWork extends Component {
           <h1>Featured Works</h1>
           <h3>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse ex quam, suscipit ut ipsum ultrices,
           mattis tempor nisl. </h3>
-          <div className="gallery">
-            {this.images.map((i, key) => <img key={key} src={i} />)}
-          </div>
+          <Gallery />
           <RaisedButton label="Visit Our Gallery" secondary containerElement={<NavLink to="/gallery"/>}/>
         </div>
       </section>
