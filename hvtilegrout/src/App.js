@@ -10,6 +10,7 @@ import AboutPage from "./components/about/AboutPage";
 import GalleryPage from "./components/gallery/GalleryPage";
 import ContactPage from "./components/contact/ContactPage";
 import "./App.css";
+import "react-image-gallery/styles/css/image-gallery.css";
 
 injectTapEventPlugin();
 
