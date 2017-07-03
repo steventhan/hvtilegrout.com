@@ -1,0 +1,32 @@
+.services-offered .container .service .row {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 3em;
+}
+
+.services-offered .container .service .row {
+}
+
+.services-offered h1 {
+  text-align: center;
+}
+
+.services-offered h2 {
+  margin-bottom: -0.2em;
+}
+
+@media only screen and (min-width: 740px) {
+  .services-offered .container .service .row {
+    flex-direction: row;
+  }
+
+  .services-offered .service .row .description {
+    padding-right: 2em;
+    width: 60%;
+  }
+
+  .services-offered .service .row .gallery {
+    width: 40%;
+  }
+
+}
