@@ -6,7 +6,7 @@ import OurTeam from "./OurTeam";
 class HomePage extends Component {
   render() {
     return (
-      <main className="home-page">
+      <main style={{backgroundColor: "#37474F"}} className="home-page">
         <Header />
         <FeaturedWork />
         <OurTeam />
