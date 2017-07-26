@@ -1,7 +1,6 @@
 import React, { Component } from "react";
 import { RaisedButton, TextField } from "material-ui";
 import { fullWhite } from "material-ui/styles/colors";
-import "./ContactForm.css";
 
 
 class ContactForm extends Component {
@@ -19,42 +18,44 @@ class ContactForm extends Component {
 
   render() {
     return (
-      <section className="contact">
-        <div className="container">
+      <div className="contact-form">
+        <form>
           <h1>Contact form</h1>
-          <form className="contact-form">
-            <TextField
-              name="name"
-              fullWidth
-              floatingLabelText="Name *"
-              floatingLabelStyle={{color: fullWhite}}
-              errorText={this.state.errorText}
-              onChange={this.handleChange}
-            />
-            <TextField
-              name="email"
-              fullWidth
-              floatingLabelText="Email *"
-              floatingLabelStyle={{color: fullWhite}}
-            />
-            <TextField
-              name="message"
-              fullWidth
-              floatingLabelText="Message *"
-              floatingLabelStyle={{color: fullWhite}}
-              multiLine={true}
-              rows={5}
-            />
-            <br />
-            <br />
-            <RaisedButton
-              label="Send"
-              primary
-              fullWidth
-            />
-          </form>
-        </div>
-      </section>
+          <TextField
+            name="name"
+            fullWidth
+            floatingLabelText="Name *"
+            floatingLabelStyle={{color: fullWhite}}
+            errorText={this.state.errorText}
+            onChange={this.handleChange}
+          />
+          <TextField
+            name="email"
+            fullWidth
+            floatingLabelText="Email *"
+            floatingLabelStyle={{color: fullWhite}}
+            errorText={this.state.errorText}
+            onChange={this.handleChange}
+          />
+          <TextField
+            name="message"
+            fullWidth
+            floatingLabelText="Message *"
+            floatingLabelStyle={{color: fullWhite}}
+            multiLine={true}
+            rows={5}
+            errorText={this.state.errorText}
+            onChange={this.handleChange}
+          />
+          <br />
+          <br />
+          <RaisedButton
+            label="Send"
+            primary
+            fullWidth
+          />
+        </form>
+      </div>
     );
   }
 }
