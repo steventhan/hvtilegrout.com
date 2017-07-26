@@ -1,8 +1,12 @@
 body {
   min-height: 100vh;
-  color: #fff;
+  color: #fdfdfd;
   font-family: 'Roboto', sans-serif;
   font-weight: 200;
+}
+
+h1 {
+  text-transform: uppercase;
 }
 
 h1, h2, h3, h4 {
