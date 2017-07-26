@@ -1,6 +1,8 @@
 import React, { Component } from "react";
 import FontAwesome from "react-fontawesome";
 
+import SectionHeaderText from "../menus/SectionHeaderText";
+
 import "./OurTeam.css";
 
 class People extends Component {
@@ -63,7 +65,7 @@ class OurTeam extends Component {
     return (
       <section className="our-team">
         <div className="container">
-          <h1>Our Team</h1>
+          <SectionHeaderText text="Our Team" center />
           <h3>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse ex quam, suscipit ut ipsum ultrices,
           mattis tempor nisl. </h3>
           <People />

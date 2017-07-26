@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import { RaisedButton, TextField } from "material-ui";
 import { fullWhite } from "material-ui/styles/colors";
 
+import SectionHeaderText from "../menus/SectionHeaderText";
 
 class ContactForm extends Component {
   constructor(props) {
@@ -20,7 +21,7 @@ class ContactForm extends Component {
     return (
       <div className="contact-form">
         <form>
-          <h1>Contact form</h1>
+          <SectionHeaderText text="Contact form" />
           <TextField
             name="name"
             fullWidth

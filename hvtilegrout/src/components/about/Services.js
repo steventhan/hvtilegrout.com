@@ -1,5 +1,7 @@
 import React, { Component } from "react";
 import ImageGallery from "react-image-gallery";
+
+import SectionHeaderText from "../menus/SectionHeaderText";
 import "./Services.css";
 
 class Service extends Component {
@@ -101,7 +103,7 @@ class Services extends Component {
     return (
       <section className="services-offered">
         <div className="container">
-          <h1>Services Offered</h1>
+          <SectionHeaderText text="Services Offered" center />
           {this.services.map((s, indx) => <Service key={indx} service={s} />)}
         </div>
       </section>

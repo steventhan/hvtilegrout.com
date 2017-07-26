@@ -3,6 +3,7 @@ import { NavLink } from "react-router-dom";
 import { RaisedButton } from "material-ui";
 import Lightbox from "react-images";
 
+import SectionHeaderText from "../menus/SectionHeaderText";
 import "./FeaturedWork.css";
 
 class Gallery extends Component {
@@ -81,7 +82,7 @@ class FeaturedWork extends Component {
     return (
       <section className="featured-work">
         <div className="container">
-          <h1>Featured Works</h1>
+          <SectionHeaderText text="Featured Works" center />
           <h3>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse ex quam, suscipit ut ipsum ultrices,
           mattis tempor nisl. </h3>
           <Gallery />
