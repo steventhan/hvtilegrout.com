@@ -83,8 +83,7 @@ class FeaturedWork extends Component {
       <section ref="featuredWorkSection" className="featured-work">
         <div className="container">
           <SectionHeaderText text="Featured Works" center />
-          <h3>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse ex quam, suscipit ut ipsum ultrices,
-          mattis tempor nisl. </h3>
+          <h3>Check out some of our best projects. Visit our gallery page for more.</h3>
           <Gallery />
           <RaisedButton label="Visit Our Gallery" secondary containerElement={<NavLink to="/gallery"/>}/>
         </div>

@@ -66,8 +66,6 @@ class OurTeam extends Component {
       <section className="our-team">
         <div className="container">
           <SectionHeaderText text="Our Team" center />
-          <h3>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse ex quam, suscipit ut ipsum ultrices,
-          mattis tempor nisl. </h3>
           <People />
         </div>
       </section>
