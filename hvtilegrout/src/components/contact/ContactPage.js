@@ -1,14 +1,14 @@
 import React, { Component } from "react";
 
 import Contact from "./Contact";
-import Map from "./Map";
+import Location from "./Location";
 
 class ContactPage extends Component {
   render() {
     return (
       <main id="contact-page">
         <Contact />
-        <Map />
+        <Location />
       </main>
     );
   }
