@@ -4,11 +4,19 @@ import FeaturedWork from "./FeaturedWork";
 import OurTeam from "./OurTeam";
 
 class HomePage extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {featuredWorkSection: {}};
+  }
+
+  componentDidMount() {
+    this.setState({featuredWorkSection: this.refs.featuredWork.refs.featuredWorkSection});
+  }
   render() {
     return (
       <main style={{backgroundColor: "#37474F"}} className="home-page">
-        <Header />
-        <FeaturedWork />
+        <Header featuredWorkSection={this.state.featuredWorkSection}/>
+        <FeaturedWork ref="featuredWork"/>
         <OurTeam />
       </main>
     );

@@ -80,7 +80,7 @@ class Gallery extends Component {
 class FeaturedWork extends Component {
   render() {
     return (
-      <section className="featured-work">
+      <section ref="featuredWorkSection" className="featured-work">
         <div className="container">
           <SectionHeaderText text="Featured Works" center />
           <h3>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse ex quam, suscipit ut ipsum ultrices,
