@@ -1,0 +1,15 @@
+#gallery-page .gallery {
+  margin-top: 2em;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: space-between;
+  align-content: space-between;
+  align-items: center;
+}
+
+@media only screen and (min-width: 640px) {
+  #gallery-page .gallery {
+    flex-direction: row;
+  }
+}
