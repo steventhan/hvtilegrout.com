@@ -1,12 +1,12 @@
 import React, { Component } from "react";
 import ContactForm from "./ContactForm";
 import ContactInfo from "./ContactInfo";
-import "./Contact.css";
+import style from "./Contact.css";
 
 class Contact extends Component {
   render() {
     return (
-      <section id="contact">
+      <section style={style} id="contact">
         <div className="container">
           <ContactInfo />
           <ContactForm />

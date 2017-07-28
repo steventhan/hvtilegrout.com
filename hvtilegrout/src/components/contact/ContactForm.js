@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import { RaisedButton, TextField } from "material-ui";
 import { fullWhite } from "material-ui/styles/colors";
+import Recaptcha from "react-recaptcha";
 
 import SectionHeaderText from "../menus/SectionHeaderText";
 
@@ -15,6 +16,10 @@ class ContactForm extends Component {
     if (e.target.value === "") {
       this.setState({errorText: "This field is required"});
     }
+  }
+
+  handleLoadCallback(res) {
+    console.log(res);
   }
 
   render() {
@@ -49,6 +54,12 @@ class ContactForm extends Component {
             onChange={this.handleChange}
           />
           <br />
+          <br />
+          <Recaptcha
+            sitekey="6LfgxSoUAAAAAPdWf64YEfzdImU1Je3ZFO0W-rV0"
+            onloadCallback={this.handleLoadCallback}
+            theme="dark"
+          />
           <br />
           <RaisedButton
             label="Send"
