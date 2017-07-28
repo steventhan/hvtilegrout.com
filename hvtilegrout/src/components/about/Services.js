@@ -38,9 +38,6 @@ class Services extends Component {
         name: "Full Walls & Floors Tiling",
         images:[
           {src: "http://i.imgur.com/F9uBiUY.jpg"},
-          {src: "http://i.imgur.com/F9uBiUY.jpg"},
-          {src: "http://i.imgur.com/F9uBiUY.jpg"},
-          {src: "http://i.imgur.com/F9uBiUY.jpg"},
         ],
         description: "Integer ultrices orci consectetur, tincidunt eros quis, porttitor ligula. Quisque id tortor est. "
         + "Phasellus pellentesque mattis rhoncus. Ut metus quam, fermentum vel fermentum et, finibus sit amet nunc. "
@@ -51,12 +48,7 @@ class Services extends Component {
       {
         name: "Painting & Decorating",
         images:[
-          {src: "http://i.imgur.com/kwNKVWc.jpg"},
-          {src: "http://i.imgur.com/wDi6zYv.jpg"},
           {src: "http://i.imgur.com/F9uBiUY.jpg"},
-          {src: "http://i.imgur.com/F9uBiUY.jpg"},
-          {src: "http://i.imgur.com/F9uBiUY.jpg"},
-          {src: "http://i.imgur.com/MFjDnru.jpg"}
         ],
         description: "Integer ultrices orci consectetur, tincidunt eros quis, porttitor ligula. Quisque id tortor est. "
         + "Phasellus pellentesque mattis rhoncus. Ut metus quam, fermentum vel fermentum et, finibus sit amet nunc. "
@@ -68,11 +60,6 @@ class Services extends Component {
         name: "Re-grouting",
         images:[
           {src: "http://i.imgur.com/kwNKVWc.jpg"},
-          {src: "http://i.imgur.com/wDi6zYv.jpg"},
-          {src: "http://i.imgur.com/F9uBiUY.jpg"},
-          {src: "http://i.imgur.com/F9uBiUY.jpg"},
-          {src: "http://i.imgur.com/F9uBiUY.jpg"},
-          {src: "http://i.imgur.com/MFjDnru.jpg"}
         ],
         description: "Integer ultrices orci consectetur, tincidunt eros quis, porttitor ligula. Quisque id tortor est. "
         + "Phasellus pellentesque mattis rhoncus. Ut metus quam, fermentum vel fermentum et, finibus sit amet nunc. "
@@ -83,11 +70,7 @@ class Services extends Component {
       {
         name: "Bathroom Installation",
         images:[
-          {src: "http://i.imgur.com/kwNKVWc.jpg"},
           {src: "http://i.imgur.com/wDi6zYv.jpg"},
-          {src: "http://i.imgur.com/F9uBiUY.jpg"},
-          {src: "http://i.imgur.com/F9uBiUY.jpg"},
-          {src: "http://i.imgur.com/F9uBiUY.jpg"},
           {src: "http://i.imgur.com/MFjDnru.jpg"}
         ],
         description: "Integer ultrices orci consectetur, tincidunt eros quis, porttitor ligula. Quisque id tortor est. "
