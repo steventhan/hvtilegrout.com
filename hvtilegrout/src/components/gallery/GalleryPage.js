@@ -1,10 +1,29 @@
 import React, { Component } from "react";
+import Gallery from "./Gallery";
+import SectionHeaderText from "../menus/SectionHeaderText";
 
 class GalleryPage extends Component {
+  constructor(props) {
+    super(props);
+    this.images = [
+      {src: "http://i.imgur.com/kwNKVWc.jpg"},
+      {src: "http://i.imgur.com/wDi6zYv.jpg"},
+      {src: "http://i.imgur.com/F9uBiUY.jpg"},
+      {src: "http://i.imgur.com/F9uBiUY.jpg"},
+      {src: "http://i.imgur.com/F9uBiUY.jpg"},
+      {src: "http://i.imgur.com/MFjDnru.jpg"}
+    ];
+  }
+
   render() {
     return (
       <main className="gallery-page">
-        <h1>This is gallery page.</h1>
+        <section>
+          <div className="container">
+            <SectionHeaderText text="Gallery" center />
+            <Gallery images={this.images} />
+          </div>
+        </section>
       </main>
     );
   }
