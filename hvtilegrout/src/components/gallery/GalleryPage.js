@@ -17,7 +17,7 @@ class GalleryPage extends Component {
 
   render() {
     return (
-      <main className="gallery-page">
+      <main id="gallery-page">
         <section>
           <div className="container">
             <SectionHeaderText text="Gallery" center />

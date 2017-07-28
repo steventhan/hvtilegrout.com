@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import { default as PhotoGallery } from "react-photo-gallery";
 import Lightbox from "react-images";
+import "./Gallery.css";
 
 
 class Gallery extends Component {
