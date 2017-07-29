@@ -1,10 +1,12 @@
 import React, { Component } from "react";
-import { RaisedButton, TextField, CircularProgress } from "material-ui";
-import { fullWhite } from "material-ui/styles/colors";
+import { RaisedButton, FlatButton, TextField, CircularProgress, Dialog } from "material-ui";
 import Send from "material-ui/svg-icons/content/send";
 import { blueGrey800 } from "material-ui/styles/colors";
 import Recaptcha from "react-recaptcha";
 import validate from "validate.js";
+import axios from "axios";
+
+import cred from "../../credentials";
 
 import SectionHeaderText from "../menus/SectionHeaderText";
 
@@ -27,13 +29,13 @@ class SendButton extends Component {
       <RaisedButton
         type={this.props.type}
         icon={this.props.sending ? <CircularProgress color={blueGrey800} size={20} thickness={2} /> : <Send />}
-        label={!this.props.sending && "Send"}
+        label={this.props.sending ? "" : "Send"}
         labelPosition="before"
-        labelStyle={this.state.disabled && {color: blueGrey800}}
+        labelStyle={this.state.disabled ? {color: blueGrey800} : {}}
         disabled={this.state.disabled}
         primary
         fullWidth
-        onClick={this.props.onClick}
+        onTouchTap={this.props.onTouchTap}
       />
     );
   }
@@ -53,11 +55,16 @@ class ContactForm extends Component {
       sending: false
     };
     this.handleChange = this.handleChange.bind(this);
+    this.handleDialogClose = this.handleDialogClose.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
   }
 
   handleChange(e) {
     this[e.target.name] = e.target.value;
+  }
+
+  handleDialogClose(e) {
+    this.setState({sent: undefined});
   }
 
   handleSubmit(e) {
@@ -85,7 +92,17 @@ class ContactForm extends Component {
       this.setState({errors: errors});
       return;
     }
+
     this.setState({errors: {}, sending: true});
+    axios.post("/api/email", {
+      name: this.name,
+      email: this.email,
+      message: this.message
+    }).then((res) => {
+      this.setState({sent: res.data.sent, sending: false});
+    }).catch((error) => {
+      this.setState({sent: false, sending: false});
+    });
   }
 
   render() {
@@ -122,7 +139,8 @@ class ContactForm extends Component {
           <br />
           <br />
           <Recaptcha
-            sitekey="6LfgxSoUAAAAAPdWf64YEfzdImU1Je3ZFO0W-rV0"
+            sitekey={cred.recaptcha.sitekey}
+            render="explicit"
             theme="dark"
             onloadCallback={() => {}}
             verifyCallback={() => this.setState({human: true})}
@@ -135,6 +153,13 @@ class ContactForm extends Component {
             sending={this.state.sending}
           />
         </form>
+        <Dialog
+          open={typeof(this.state.sent) === "boolean"}
+          actions={[<RaisedButton label="OK" secondary onTouchTap={this.handleDialogClose} />]}
+          onRequestClose={this.handleDialogClose}
+        >
+          Message {this.state.sent ? "sent!" : "did not send, try again."}
+        </Dialog>
       </div>
     );
   }
