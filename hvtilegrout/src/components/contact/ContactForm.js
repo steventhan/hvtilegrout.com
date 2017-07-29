@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { RaisedButton, FlatButton, TextField, CircularProgress, Dialog } from "material-ui";
+import { RaisedButton, TextField, CircularProgress, Dialog } from "material-ui";
 import Send from "material-ui/svg-icons/content/send";
 import { blueGrey800 } from "material-ui/styles/colors";
 import Recaptcha from "react-recaptcha";

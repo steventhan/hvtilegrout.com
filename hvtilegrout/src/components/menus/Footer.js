@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { BottomNavigation, BottomNavigationItem } from "material-ui/BottomNavigation";
+import { BottomNavigation } from "material-ui/BottomNavigation";
 
 class Footer extends Component {
   render() {

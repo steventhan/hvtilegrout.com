@@ -1,7 +1,6 @@
 import React, { Component } from "react";
 import About from "./About";
 import Services from "./Services";
-import { Divider } from "../menus";
 
 class AboutPage extends Component {
   constructor(props) {
@@ -16,11 +15,6 @@ class AboutPage extends Component {
       {src: "http://i.imgur.com/F9uBiUY.jpg"},
     ];
   }
-        // <ImageGallery
-        //   items={this.images.map(img => {
-        //     return {original: img.src, thumbnail: img.src};
-        //   })}
-        // />
 
   render() {
     return (

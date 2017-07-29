@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import { NavLink } from "react-router-dom";
-import { AppBar, FlatButton, MenuItem } from "material-ui";
+import { AppBar, FlatButton } from "material-ui";
 
 import logo from "../../hv-logo.png";
 
@@ -46,7 +46,7 @@ class NavigationBar extends Component {
   render() {
     return (
       <AppBar
-        iconElementLeft={<img src={logo} />}
+        iconElementLeft={<img alt="HV Logo" src={logo} />}
         iconElementRight={<NavigationItems />}
       >
       </AppBar>

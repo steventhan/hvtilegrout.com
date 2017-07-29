@@ -43,7 +43,7 @@ class People extends Component {
           return (
             <div className="person" key={p.name}>
               <div className="avartar">
-                <img src={p.img} />
+                <img alt="" src={p.img} />
                 <div className="overlay">
                   <div className="bio">{p.position}</div>
                 </div>

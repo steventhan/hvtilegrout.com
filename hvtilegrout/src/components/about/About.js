@@ -11,7 +11,7 @@ class About extends Component {
         <div className="container">
           <SectionHeaderText text="About Us" center />
           <div className="row">
-            <div className="logo"><img src={fullSizeLogo} /></div>
+            <div className="logo"><img alt="" src={fullSizeLogo} /></div>
             <div className="story">
               <p>
                 <strong>Our mission</strong> is to provide highest quality of services while saving your time

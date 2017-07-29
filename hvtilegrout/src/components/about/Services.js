@@ -5,10 +5,6 @@ import SectionHeaderText from "../menus/SectionHeaderText";
 import "./Services.css";
 
 class Service extends Component {
-  constructor(props) {
-    super(props);
-  }
-
   render() {
     return (
       <div className="service">

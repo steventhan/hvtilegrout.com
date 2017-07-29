@@ -19,7 +19,7 @@ class Header extends Component {
             label="Featured Works"
             labelStyle={{fontSize: 18}}
             secondary={true}
-            onClick={e => this.props.featuredWorkSection.scrollIntoView()}
+            onTouchTap={e => this.props.featuredWorkSection.scrollIntoView()}
           />
         </div>
       </section>
