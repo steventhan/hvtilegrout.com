@@ -34,7 +34,7 @@ class Gallery extends Component {
       <div className="gallery">
         {this.props.images.map((img, indx) => {
           return (
-            <a
+            <a className="preview"
               href=""
               onTouchTap={e => {
                 e.preventDefault();

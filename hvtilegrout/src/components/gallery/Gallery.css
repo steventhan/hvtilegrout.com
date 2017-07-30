@@ -1,15 +1,21 @@
 #gallery-page .gallery {
-  margin-top: 2em;
   display: flex;
   flex-wrap: wrap;
-  flex-direction: column;
-  justify-content: space-between;
+  justify-content: center;
   align-content: space-between;
   align-items: center;
 }
 
+#gallery-page .gallery .preview {
+  margin: auto;
+}
+
+#gallery-page .gallery .preview img {
+  max-width: 120px;
+}
+
 @media only screen and (min-width: 640px) {
-  #gallery-page .gallery {
-    flex-direction: row;
+  #gallery-page .gallery .preview img {
+    max-width: 300px;
   }
 }
