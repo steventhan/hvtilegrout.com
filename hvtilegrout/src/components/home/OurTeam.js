@@ -50,7 +50,7 @@ class People extends Component {
               </div>
               <div className="info">
                 <h3>{p.name}</h3>
-                <a href={`mailto:${p.email}`}><FontAwesome className="fa fa-envelope-o"/> Email</a>
+                <a href={`mailto:${p.email}`}><FontAwesome name="email" className="fa fa-envelope-o"/> Email</a>
               </div>
             </div>
           );
