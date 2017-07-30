@@ -20,6 +20,7 @@ class NavigationDrawer extends Component {
         docked={false}
         open={this.props.drawerOpen}
         openSecondary
+        disableSwipeToOpen
         onRequestChange={this.handleRequestChange}
       >
           <br />
