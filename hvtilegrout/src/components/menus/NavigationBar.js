@@ -1,20 +1,11 @@
 import React, { Component } from "react";
 import { NavLink } from "react-router-dom";
-import { AppBar, FlatButton } from "material-ui";
+import { AppBar, FlatButton, IconButton } from "material-ui";
+import Hamburger from "material-ui/svg-icons/navigation/menu";
 
 import logo from "../../hv-logo.png";
 
 class NavigationItems extends Component {
-  constructor(props) {
-    super(props);
-    this.menuLinks = [
-      {text: "Home", url: "/"},
-      {text: "About", url: "/about"},
-      {text: "Gallery", url: "/gallery"},
-      {text: "Contact", url: "/contact"},
-    ];
-  }
-
   render() {
     let style = {
       marginTop: "6px"
@@ -22,7 +13,7 @@ class NavigationItems extends Component {
 
     return (
       <div style={style} className="nav-items">
-        {this.menuLinks.map(item => {
+        {this.props.menuLinks.map(item => {
           return (
             <FlatButton
               key={item.text}
@@ -31,7 +22,6 @@ class NavigationItems extends Component {
                 <NavLink
                   exact to={item.url}
                   activeStyle={{backgroundColor: "rgba(153, 153, 153, 0.2)"}}>
-                  {item.text}
                 </NavLink>
               }
             />
@@ -43,11 +33,26 @@ class NavigationItems extends Component {
 }
 
 class NavigationBar extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {windowWidth: window.innerWidth};
+  }
+
+  componentDidMount() {
+    window.addEventListener("resize", (e) => this.setState({windowWidth: window.innerWidth}));
+  }
+
   render() {
     return (
       <AppBar
-        iconElementLeft={<img alt="HV Logo" src={logo} />}
-        iconElementRight={<NavigationItems />}
+        iconElementLeft={<NavLink to="/"><img alt="HV Logo" src={logo} /></NavLink>}
+        iconElementRight={
+          this.state.windowWidth < 900 ?
+          <IconButton onTouchTap={(e) => this.props.onHamburgerTouchTap(e)}>
+            <Hamburger />
+          </IconButton> :
+          <NavigationItems menuLinks={this.props.menuLinks}  />
+        }
       >
       </AppBar>
     );
