@@ -5,9 +5,22 @@
 }
 
 .featured-work .gallery {
+  margin-top: 2em;
+  display: flex;
+  flex-wrap: wrap;
   margin-bottom: 2em;
 }
 
 .featured-work .gallery a {
   margin: auto;
+}
+
+.featured-work .gallery .preview img {
+  max-width: 130px;
+}
+
+@media only screen and (min-width: 640px) {
+  .featured-work .gallery .preview img {
+    max-width: 300px;
+  }
 }
