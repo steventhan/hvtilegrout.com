@@ -10,8 +10,8 @@ class People extends Component {
     super(props);
     this.people = [
       {
-        name: "Dexter Gilbert",
-        position: "Owner",
+        name: "Kingsley Dinh",
+        position: "Owner/Lead technician",
         email: "email@example.com",
         img: "http://via.placeholder.com/250x250"
       },
@@ -29,7 +29,7 @@ class People extends Component {
       },
       {
         name: "Bill Smith",
-        position: "Lead contractor",
+        position: "Technician",
         email: "email@example.com",
         img: "http://via.placeholder.com/250x250"
       },
