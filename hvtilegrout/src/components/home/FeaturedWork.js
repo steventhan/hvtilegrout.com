@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { NavLink } from "react-router-dom";
+import { Link } from "react-router-dom";
 import { RaisedButton } from "material-ui";
 
 import SectionHeaderText from "../menus/SectionHeaderText";
@@ -26,7 +26,11 @@ class FeaturedWork extends Component {
           <SectionHeaderText text="Featured Works" center />
           <h3>Check out some of our best projects. Visit our gallery page for more.</h3>
           <Gallery images={this.images} />
-          <RaisedButton label="Visit Our Gallery" secondary containerElement={<NavLink to="/gallery"/>}/>
+          <RaisedButton
+            label="Visit Our Gallery"
+            secondary
+            containerElement={<Link to="/gallery"/>}
+          />
         </div>
       </section>
     );
