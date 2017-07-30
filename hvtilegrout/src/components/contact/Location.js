@@ -1,7 +1,8 @@
 import React, { Component } from "react";
-import { withGoogleMap, GoogleMap, Marker } from "react-google-maps";
+import { withGoogleMap, GoogleMap, Marker, InfoWindow } from "react-google-maps";
 
 import SectionHeaderText from "../menus/SectionHeaderText";
+import info from "../../business-info.json";
 
 const mapStyle = [
   {
@@ -226,12 +227,18 @@ const GettingStartedGoogleMap = withGoogleMap(props => (
       styles: mapStyle
     }}
     defaultZoom={15}
-    defaultCenter={{ lat: 37.774684, lng: -122.435652 }}
+    defaultCenter={{ lat: info.address.lat, lng: info.address.lng }}
   >
     {props.markers.map(marker => (
       <Marker
         {...marker}
-      />
+      >
+        {marker.showInfo && (
+          <InfoWindow onCloseClick={() => {}}>
+            <div style={{color: "#090909"}} dangerouslySetInnerHTML={{__html: marker.infoContent}}></div>
+          </InfoWindow>
+        )}
+      </Marker>
     ))}
   </GoogleMap>
 ));
@@ -242,10 +249,12 @@ class Map extends Component {
     this.state = {
       markers: [{
         position: {
-          lat: 37.7746842,
-          lng: -122.435652,
+          lat: info.address.lat,
+          lng: info.address.lng,
         },
         key: "Location",
+        showInfo: true,
+        infoContent: `<h1>${info.name}</h1><h2>${info.address.value}<h2>`,
         defaultAnimation: 2,
       }],
     };
