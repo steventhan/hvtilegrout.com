@@ -19,7 +19,8 @@ section .header-text {
 }
 
 section .header-text h1 {
-  margin-bottom: 0.5em;
+  font-size: 1.75em;
+  margin-bottom: 0.75em;
 }
 
 section .header-text .border {
@@ -32,7 +33,7 @@ section .header-text .border {
 
 section .container {
   width: 85%;
-  padding-top: 1em;
+  padding-top: 0.75em;
   padding-bottom: 3em;
 }
 
@@ -45,16 +46,12 @@ main section {
   background-color: #212121;
 }
 
-.nav-items {
-  display: none;
+.drawer-item-active {
+  background-color: rgba(153, 153, 153, 0.2) !important;
 }
 
 @media only screen and (min-width: 640px) {
   section .container {
     width: 75%;
-  }
-
-  .nav-items {
-    display: block;
   }
 }
