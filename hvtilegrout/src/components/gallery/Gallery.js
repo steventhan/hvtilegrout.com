@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import Lightbox from "react-images";
+import Masonry from "react-masonry-component";
 import "./Gallery.css";
 
 
@@ -31,10 +32,20 @@ class Gallery extends Component {
 
   render() {
     return (
-      <div className="gallery">
+      <Masonry
+        className={"gallery"}
+        options={{
+          columnWidth: ".gallery-item",
+          itemSelector: ".gallery-item",
+          gutter: ".gallery-sizer",
+          percentPosition: true,
+        }}
+        updateOnEachImageLoad
+      >
+        <div className="gallery-sizer"></div>
         {this.props.images.map((img, indx) => {
           return (
-            <a className="preview"
+            <a className="gallery-item"
               href=""
               onTouchTap={e => {
                 e.preventDefault();
@@ -60,7 +71,7 @@ class Gallery extends Component {
           onClickPrev={this.handlePrev}
           backdropClosesModal
         />
-      </div>
+      </Masonry>
     );
   }
 }

@@ -1,21 +1,23 @@
-#gallery-page .gallery {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-content: space-between;
-  align-items: center;
+#gallery-page .gallery .gallery-sizer {
+  width: 2%;
 }
 
-#gallery-page .gallery .preview {
-  margin: auto;
+#gallery-page .gallery .gallery-item {
+  width: 48%;
+  margin-bottom: 3px;
 }
 
-#gallery-page .gallery .preview img {
-  max-width: 120px;
+#gallery-page .gallery .gallery-item img {
+  width: 100%;
 }
 
 @media only screen and (min-width: 640px) {
-  #gallery-page .gallery .preview img {
-    max-width: 300px;
+  #gallery-page .gallery .gallery-sizer {
+    width: 1%;
+  }
+
+  #gallery-page .gallery .gallery-item {
+    width: 23%;
+    margin-bottom: 5px;
   }
 }
