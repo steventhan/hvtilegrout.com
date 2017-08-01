@@ -46,13 +46,15 @@ class NavigationBar extends Component {
     return (
       <AppBar
         iconElementLeft={<NavLink to="/"><img alt="HV Logo" src={logo} /></NavLink>}
+        iconStyleLeft= {this.state.windowWidth < 640 ? {} : {marginLeft: "7%"}}
         iconElementRight={
-          this.state.windowWidth < 900 ?
+          this.state.windowWidth < 640 ?
           <IconButton onTouchTap={(e) => this.props.onHamburgerTouchTap(e)}>
             <Hamburger />
           </IconButton> :
           <NavigationItems menuLinks={this.props.menuLinks}  />
         }
+        iconStyleRight= {this.state.windowWidth < 640 ? {} : {marginRight: "7%"}}
       >
       </AppBar>
     );
