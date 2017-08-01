@@ -6,7 +6,7 @@ import background from "../../header-bg.jpg";
 class Header extends Component {
   render() {
     return (
-      <section style={{background: `url(${background}) no-repeat center center fixed`}} className="header">
+      <section style={{backgroundImage: `url(${background})`}} className="header">
         <div className="container">
           <h1>HV Tile Grout</h1>
           <h3>​HV Grout & Tile is the number one source in the Bay Area region and your first choice for all your
