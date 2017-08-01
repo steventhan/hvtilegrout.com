@@ -1,6 +1,10 @@
 .header {
   min-height: 94vh;
   align-items: center;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
 }
 
 .header h1 {
