@@ -21,8 +21,9 @@ class GalleryPage extends Component {
     return (
       <main id="gallery-page">
         <section>
-          <div className="container">
+          <div className="container" style={{textAlign: "center"}}>
             <SectionHeaderText text="Gallery" center />
+            <h3>We are still in the process of updating our gallery, stay tuned for more exciting projects.</h3>
             <Gallery images={this.images} />
           </div>
         </section>
