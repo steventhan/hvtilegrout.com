@@ -1,0 +1,36 @@
+.about .container {
+  display: flex;
+  flex-direction: column;
+}
+
+.about .container h1 {
+  text-align: center;
+}
+
+.about .container .row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+
+.about .container .row .logo img {
+  width: 80%;
+  height: auto;
+}
+
+@media only screen and (min-width: 740px) {
+  .about .container .row {
+    display: flex;
+    flex-wrap: nowrap;
+  }
+
+  .about .container .row .logo {
+    flex: 1;
+  }
+
+  .about .container .row .story {
+    flex: 2;
+  }
+}

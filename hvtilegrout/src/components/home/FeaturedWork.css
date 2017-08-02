@@ -1,0 +1,35 @@
+.featured-work {
+  background-color: #F5F5F5;
+  text-align: center;
+  color: #37474F;
+}
+
+.featured-work .gallery .gallery-sizer {
+  width: 2%;
+}
+
+.featured-work .gallery .gallery-item {
+  width: 48%;
+  margin-bottom: 3px;
+}
+
+.featured-work .gallery .gallery-item img:hover {
+  box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+  transition: all 0.1s;
+  transform: scale(1.01);
+}
+
+.featured-work .gallery .gallery-item img {
+  width: 100%;
+}
+
+@media only screen and (min-width: 640px) {
+  .featured-work .gallery .gallery-sizer {
+    width: 1%;
+  }
+
+  .featured-work .gallery .gallery-item {
+    width: 23%;
+    margin-bottom: 5px;
+  }
+}

@@ -1,0 +1,45 @@
+.our-team {
+  display: flex;
+  flex: 1;
+  background-color: #212121;
+  text-align: center;
+}
+
+.people {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.person {
+  margin-bottom: 3em;
+}
+
+.avartar img {
+  border-radius: 50%;
+}
+
+.avartar {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+
+.avartar .overlay {
+  border-radius: 50%;
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  display: none;
+}
+
+.avartar:hover .overlay {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: rgba(0, 0, 0, .4);
+}

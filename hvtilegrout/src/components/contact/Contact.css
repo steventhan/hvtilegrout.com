@@ -1,0 +1,11 @@
+#contact-page #contact .container {
+  display: flex;
+  flex-direction: column;
+}
+
+@media only screen and (min-width: 740px) {
+  #contact-page #contact .container {
+    flex-direction: row;
+    justify-content: space-around;
+  }
+}
