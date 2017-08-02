@@ -262,13 +262,13 @@ class Map extends Component {
 
   render() {
     return (
-      <div style={{height: "500px", marginTop: "2em"}}>
+      <div style={{height: "600px", marginTop: "2em"}}>
         <GettingStartedGoogleMap
           containerElement={
-            <div style={{ height: "500px" }} />
+            <div style={{ height: "600px" }} />
           }
           mapElement={
-            <div style={{ height: "500px" }} />
+            <div style={{ height: "600px" }} />
           }
           markers={this.state.markers}
         />
