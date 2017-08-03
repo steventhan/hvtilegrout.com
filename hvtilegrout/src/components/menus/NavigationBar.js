@@ -18,6 +18,7 @@ class NavigationItems extends Component {
             <FlatButton
               key={item.text}
               label={item.text}
+              labelStyle={{fontSize: 17}}
               containerElement={
                 <NavLink
                   exact to={item.url}
