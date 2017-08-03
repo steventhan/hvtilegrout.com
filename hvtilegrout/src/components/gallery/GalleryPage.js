@@ -1,20 +1,23 @@
 import React, { Component } from "react";
 import Gallery from "./Gallery";
 import SectionHeaderText from "../menus/SectionHeaderText";
+import { getThumbnails } from "../utils/functions";
+
+const images = [
+  {src: "http://i.imgur.com/TdpiiC5.jpg"},
+  {src: "http://i.imgur.com/vcChO7L.jpg"},
+  {src: "http://i.imgur.com/8BXqdTY.jpg"},
+  {src: "http://i.imgur.com/2VupPkK.png"},
+  {src: "http://i.imgur.com/WkpnLy7.png"},
+  {src: "http://i.imgur.com/xgeG4ew.png"},
+  {src: "http://i.imgur.com/o9jBibu.png"},
+  {src: "http://i.imgur.com/NDhlDIZ.png"},
+];
 
 class GalleryPage extends Component {
   constructor(props) {
     super(props);
-    this.images = [
-      {src: "http://i.imgur.com/TdpiiC5.jpg"},
-      {src: "http://i.imgur.com/vcChO7L.jpg"},
-      {src: "http://i.imgur.com/8BXqdTY.jpg"},
-      {src: "http://i.imgur.com/2VupPkK.png"},
-      {src: "http://i.imgur.com/WkpnLy7.png"},
-      {src: "http://i.imgur.com/xgeG4ew.png"},
-      {src: "http://i.imgur.com/o9jBibu.png"},
-      {src: "http://i.imgur.com/NDhlDIZ.png"},
-    ];
+    this.images = getThumbnails(images, "l");
   }
 
   render() {
