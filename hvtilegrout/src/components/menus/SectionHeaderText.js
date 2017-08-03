@@ -15,7 +15,7 @@ class SectionHeaderText extends Component {
   render() {
     return (
       <div style={this.style} className="header-text">
-        <h1>
+        <h1 style={this.props.textSize ? { fontSize: this.props.textSize } : {}}>
           {this.props.text}
           <div style={this.borderStyle} className="border"></div>
         </h1>
