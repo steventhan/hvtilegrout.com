@@ -1,5 +1,5 @@
 #gallery-page .gallery .gallery-sizer {
-  width: 2%;
+  width: 3%;
 }
 
 #gallery-page .gallery .gallery-item {
@@ -17,7 +17,18 @@
   width: 100%;
 }
 
-@media only screen and (min-width: 640px) {
+@media only screen and (min-width: 639px) and (max-width: 1099px) {
+  #gallery-page .gallery .gallery-sizer {
+    width: 2%;
+  }
+
+  #gallery-page .gallery .gallery-item {
+    width: 31%;
+    margin-bottom: 5px;
+  }
+}
+
+@media only screen and (min-width: 1100px) {
   #gallery-page .gallery .gallery-sizer {
     width: 1%;
   }

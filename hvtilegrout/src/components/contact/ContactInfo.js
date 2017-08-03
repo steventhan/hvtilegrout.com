@@ -6,7 +6,7 @@ import info from "../../business-info.json";
 class ContactInfo extends Component {
   render() {
     return (
-      <div className="contact-info">
+      <div className="contact-info" style={{paddingRight: "0.5em"}}>
         <SectionHeaderText text="Contact Info" />
         <h4><strong>Address:</strong> {info.address.value}</h4>
         <h4><strong>Phone:</strong> {info.phone}</h4>

@@ -5,7 +5,7 @@
 }
 
 .featured-work .gallery .gallery-sizer {
-  width: 2%;
+  width: 3%;
 }
 
 .featured-work .gallery .gallery-item {
@@ -21,6 +21,17 @@
 
 .featured-work .gallery .gallery-item img {
   width: 100%;
+}
+
+@media only screen and (min-width: 639px) and (max-width: 1099px) {
+  .featured-work .gallery .gallery-sizer {
+    width: 2%;
+  }
+
+  .featured-work .gallery .gallery-item {
+    width: 32%;
+    margin-bottom: 5px;
+  }
 }
 
 @media only screen and (min-width: 640px) {

@@ -2,9 +2,10 @@ import React, { Component } from "react";
 import FontAwesome from "react-fontawesome";
 import { FloatingActionButton } from "material-ui";
 
+import { menuLinks } from "./NavigationMenu";
+import SectionHeaderText from "./SectionHeaderText";
 import "./Footer.css";
 import info from "../../business-info.json";
-import { menuLinks } from "./NavigationMenu";
 
 class Footer extends Component {
   render() {
@@ -13,18 +14,18 @@ class Footer extends Component {
         <section className="footer">
           <div className="container">
             <div className="inquiry">
-              <h1 className="section-header-text">Ready to inquire ?</h1>
+              <SectionHeaderText text="Ready to inquire ?" textSize="1.3em" />
               <a href={`tel:${info.phone}`}><h4>{info.phone}</h4></a>
               <a href={menuLinks[3].url}><h4>Contact us</h4></a>
             </div>
             <div className="our-company">
-              <h1 className="section-header-text">Our company</h1>
+              <SectionHeaderText text="Our company" textSize="1.3em" />
               <a href={menuLinks[1].url}><h4>About us</h4></a>
               <a href={menuLinks[0].url}><h4>Careers</h4></a>
               <a href="/privacy-policy"><h4>Privacy policy</h4></a>
             </div>
             <div className="stay-in-touch">
-              <h1 className="section-header-text">Stay in touch</h1>
+              <SectionHeaderText text="Stay in touch" textSize="1.3em" />
               <p>
                 We would appreciate any feedback that you can provide.
                 Pick your favorite social media and let us know how we are doing.

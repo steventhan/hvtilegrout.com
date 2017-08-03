@@ -107,7 +107,7 @@ class ContactForm extends Component {
 
   render() {
     return (
-      <div className="contact-form">
+      <div className="contact-form" style={{paddingLeft: "0.5em"}}>
         <form onSubmit={this.handleSubmit}>
           <SectionHeaderText text="Contact form" />
           <TextField
