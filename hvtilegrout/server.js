@@ -1,9 +1,11 @@
 const express = require("express");
+const compression = require("compression");
 const app = express();
 const api = require("./api");
 
 const PORT = process.env.PORT || 3001;
 
+app.use(compression());
 app.use("/api", api);
 app.use(express.static("./build"));
 
