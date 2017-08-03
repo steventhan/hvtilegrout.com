@@ -57,7 +57,7 @@ class Gallery extends Component {
               }}
               key={indx}
               >
-              <img alt="" src={img.src}/>
+              <img alt="" src={img.thumbnail}/>
             </a>
           );
         })}
