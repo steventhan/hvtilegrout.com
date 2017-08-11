@@ -12,25 +12,25 @@ class People extends Component {
       {
         name: "Kingsley Dinh",
         position: "Owner/Lead technician",
-        email: "email@example.com",
+        email: "contact@hvtilegrout.com",
         img: "http://via.placeholder.com/250x250"
       },
       {
         name: "Mary Collier",
         position: "Operation manager",
-        email: "email@example.com",
+        email: "contact@hvtilegrout.com",
         img: "http://via.placeholder.com/250x250"
       },
       {
         name: "Stefan Morrison",
         position: "Receptionist",
-        email: "email@example.com",
+        email: "contact@hvtilegrout.com",
         img: "http://via.placeholder.com/250x250"
       },
       {
         name: "Bill Smith",
         position: "Technician",
-        email: "email@example.com",
+        email: "contact@hvtilegrout.com",
         img: "http://via.placeholder.com/250x250"
       },
     ];
