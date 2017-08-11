@@ -9,6 +9,10 @@ import "./Footer.css";
 import info from "../../business-info.json";
 
 class Footer extends Component {
+  constructor(props) {
+    super(props);
+    this.year = new Date().getFullYear();
+  }
   render() {
     return (
       <footer>
@@ -48,7 +52,7 @@ class Footer extends Component {
           </div>
         </section>
         <section className="copyright">
-          <p>&copy; HV Tile Grout 2017</p>
+          <p>&copy; HV Tile Grout {this.year ? this.year : 2017}</p>
         </section>
       </footer>
     );
