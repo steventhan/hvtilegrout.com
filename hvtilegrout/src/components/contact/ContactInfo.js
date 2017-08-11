@@ -8,7 +8,13 @@ class ContactInfo extends Component {
     return (
       <div className="contact-info" style={{paddingRight: "0.5em"}}>
         <SectionHeaderText text="Contact Info" />
-        <h4><strong>Address:</strong> {info.address.value}</h4>
+        <a
+          href="https://goo.gl/maps/UrM9jxcPcPv"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <h4><strong>Address:</strong> {info.address.value}</h4>
+        </a>
         <h4><strong>Phone:</strong> {info.phone}</h4>
         <h4><strong>Email:</strong>  <a href={`mailto:${info.email}`}>{info.email}</a></h4>
       </div>
