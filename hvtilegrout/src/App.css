@@ -15,6 +15,7 @@ body {
 main {
   flex: 1;
   background-color: #212121;
+  background-image: url(./crissxcross.png);
 }
 
 h1, h2, h3, h4 {
@@ -39,7 +40,7 @@ section .header-text .border {
   margin-top: 0.5em;
   margin-left: 15%;
   width: 70%;
-  border-bottom: 4px solid #37474f;
+  border-bottom: 4px solid #455A64;
   border-radius: 10%;
 }
 
