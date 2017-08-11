@@ -10,8 +10,6 @@ import cred from "../../credentials";
 
 import SectionHeaderText from "../menus/SectionHeaderText";
 
-const white = "#fdfdfd";
-
 class SendButton extends Component {
   constructor(props) {
     super(props);
@@ -53,6 +51,17 @@ class ContactForm extends Component {
       },
       human: false,
       sending: false
+    };
+    this.styles = {
+      floatingLabelStyle: {
+        color: "#fdfdfd"
+      },
+      hintStyle: {
+        color: "#7e7e7e"
+      },
+      underlineStyle: {
+        borderColor: "#B0BEC5"
+      }
     };
     this.handleChange = this.handleChange.bind(this);
     this.handleDialogClose = this.handleDialogClose.bind(this);
@@ -114,7 +123,11 @@ class ContactForm extends Component {
             name="name"
             fullWidth
             floatingLabelText="Name *"
-            floatingLabelStyle={{color: white}}
+            floatingLabelStyle={this.styles.floatingLabelStyle}
+            hintText="Name"
+            hintStyle={this.styles.hintStyle}
+            underlineStyle={this.styles.underlineStyle}
+            underlineFocusStyle={this.styles.underlineStyle}
             errorText={this.state.errors.name}
             onChange={this.handleChange}
           />
@@ -122,7 +135,11 @@ class ContactForm extends Component {
             name="email"
             fullWidth
             floatingLabelText="Email *"
-            floatingLabelStyle={{color: white}}
+            floatingLabelStyle={this.styles.floatingLabelStyle}
+            hintText="Email"
+            hintStyle={this.styles.hintStyle}
+            underlineStyle={this.styles.underlineStyle}
+            underlineFocusStyle={this.styles.underlineStyle}
             errorText={this.state.errors.email}
             onChange={this.handleChange}
           />
@@ -130,7 +147,11 @@ class ContactForm extends Component {
             name="message"
             fullWidth
             floatingLabelText="Message *"
-            floatingLabelStyle={{color: white}}
+            floatingLabelStyle={this.styles.floatingLabelStyle}
+            hintText="Message"
+            hintStyle={this.styles.hintStyle}
+            underlineStyle={this.styles.underlineStyle}
+            underlineFocusStyle={this.styles.underlineStyle}
             multiLine
             rows={5}
             errorText={this.state.errors.message}
