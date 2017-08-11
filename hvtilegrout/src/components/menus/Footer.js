@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import { Link } from "react-router-dom";
 import FontAwesome from "react-fontawesome";
 import { FloatingActionButton } from "material-ui";
 
@@ -16,13 +17,13 @@ class Footer extends Component {
             <div className="inquiry">
               <SectionHeaderText text="Ready to inquire ?" textSize="1.3em" />
               <a href={`tel:${info.phone}`}><h4>{info.phone}</h4></a>
-              <a href={menuLinks[3].url}><h4>Contact us</h4></a>
+              <Link to={menuLinks[3].url}><h4>Contact us</h4></Link>
             </div>
             <div className="our-company">
               <SectionHeaderText text="Our company" textSize="1.3em" />
-              <a href={menuLinks[1].url}><h4>About us</h4></a>
-              <a href={menuLinks[0].url}><h4>Careers</h4></a>
-              <a href="/privacy-policy"><h4>Privacy policy</h4></a>
+              <Link to={menuLinks[1].url}><h4>About us</h4></Link>
+              <Link to={menuLinks[0].url}><h4>Careers</h4></Link>
+              <Link to="/privacy-policy"><h4>Privacy policy</h4></Link>
             </div>
             <div className="stay-in-touch">
               <SectionHeaderText text="Stay in touch" textSize="1.3em" />
