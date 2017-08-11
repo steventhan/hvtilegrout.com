@@ -14,7 +14,7 @@ class HomePage extends Component {
   }
   render() {
     return (
-      <main style={{backgroundColor: "#37474F"}} className="home-page">
+      <main className="home-page">
         <Header featuredWorkSection={this.state.featuredWorkSection}/>
         <FeaturedWork ref="featuredWork"/>
         <OurTeam />
